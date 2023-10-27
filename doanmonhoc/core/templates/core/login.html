@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+
+{% block title %}conteat{% endblock %}
+
+{% block content %}
+  <div style="text-align: center; padding: 20px;">
+   
+    <div style="background-color: #3498db; padding: 20px; border-radius: 5px; display: inline-block;">
+      <h2 style="color: #fff;">Đăng nhập</h2>
+      <form action="/login" method="post"> <!-- Đổi "/login" thành URL xử lý đăng nhập thực tế -->
+        <div style="display: flex; flex-direction: column;">
+          <div style="margin: 10px 0;">
+            <label for="username" style="color: #fff;">Tên đăng ký:</label>
+            <input type="text" style="border-radius: 10px;" id="username" name="username" required>
+          </div>
+          <div style="margin: 10px 0;">
+            <label for="password" style="color: #fff;">Mật khẩu:</label>
+            <input type="password" style="border-radius: 10px;" id="password" name="password" required>
+          </div>
+        <input type="submit" value="Đăng nhập" style="background-color: #2980b9; color: #fff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Đồ Án Môn Học{% endblock%}
+
+{% block content %}
+<div style="text-align: center; padding: 20px;">
+  
+  <div style="background-color: #3498db; padding: 20px; border-radius: 5px; display: inline-block;">
+    <h2 style="color: #fff;">Chấm công </h2>
+    <video id="camera-feed" style="width: 100%; height: auto;" autoplay></video>
+    <button id="capture-button" style="background-color: #2980b9; color: #fff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">Chấm công</button>
+    <img id="captured-image" style="display: none; max-width: 100%; margin-top: 20px;">
+    
+  </div>
+</div>
+
+<script>
+  // JavaScript code to access camera and capture image
+  const cameraFeed = document.getElementById('camera-feed');
+  const captureButton = document.getElementById('capture-button');
+  const capturedImage = document.getElementById('captured-image');
+  const capturedImageData = document.getElementById('captured-image-data');
+
+  if (navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(function (stream) {
+        cameraFeed.srcObject = stream;
+      })
+      .catch(function (error) {
+        console.log("Could not access the camera: " + error);
+      });
+  }
+
+  captureButton.addEventListener('click', function () {
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    canvas.width = cameraFeed.videoWidth;
+    canvas.height = cameraFeed.videoHeight;
+    context.drawImage(cameraFeed, 0, 0, cameraFeed.videoWidth, cameraFeed.videoHeight);
+    capturedImage.src = canvas.toDataURL('image/png');
+    capturedImageData.value = canvas.toDataURL('image/png');
+    capturedImage.style.display = 'block';
+  });
+</script>
+
+{% endblock %}
