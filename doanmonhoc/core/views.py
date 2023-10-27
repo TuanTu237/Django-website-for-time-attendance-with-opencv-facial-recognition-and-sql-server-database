@@ -9,3 +9,6 @@ def login(request):
 
 def signup(request):
     return render(request,'core/signup.html')
+
+def slidebar(request):
+    return render(request,'core/slidebar.html')

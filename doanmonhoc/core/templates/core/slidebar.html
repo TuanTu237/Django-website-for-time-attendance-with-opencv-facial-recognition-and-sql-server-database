@@ -1,0 +1,92 @@
+<div class="sidebar">
+  <ul>
+      <li><a href="#">Quản lý nhân viên</a></li>
+      <li><a href="#">Xem lịch sử điểm danh nhân viên</a></li>
+      <li><a href="#">Sắp xếp lịch làm việc</a></li>
+      <li><a href="#">Xuất công</a></li>
+  </ul>
+</div>
+
+<div class="content">
+  <h1>Bảng công của nhân viên</h1>
+  <div class="center-table">
+      <table class="employee-table">
+          <tr>
+              <th>Tên nhân viên</th>
+              <th>Ngày</th>
+              <th>Giờ làm</th>
+              <th>Giờ nghỉ</th>
+          </tr>
+          <tr>
+              <td>Nguyễn Văn A</td>
+              <td>2023-10-27</td>
+              <td>8:00 AM</td>
+              <td>5:00 PM</td>
+          </tr>
+          <!--Thêm dữ liệu cho những nhân viên khác ở đây-->
+      </table>
+  </div>
+</div>
+
+<style>
+  /* CSS cho sidebar */
+  .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: skyblue; /* Đổi màu nền thành màu xanh da trời */
+      padding-top: 20px;
+      color: white;
+  }
+
+  .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+  }
+
+  .sidebar li {
+      padding: 10px;
+      text-align: center;
+  }
+
+  .sidebar a {
+      text-decoration: none;
+      color: white;
+  }
+
+  .sidebar a:hover {
+      color: #f2f2f2;
+  }
+
+  /* CSS cho phần chính */
+  .content {
+      margin-left: 260px; /* Để chừa khoảng trống cho sidebar */
+      padding: 20px;
+      text-align: center;
+  }
+
+  /* CSS cho bảng công của nhân viên */
+  .employee-table {
+      border-collapse: collapse;
+      width: 100%;
+  }
+
+  .employee-table th, .employee-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+  }
+
+  .employee-table th {
+      background-color: #333;
+      color: white;
+  }
+
+  /* CSS để căn giữa bảng công */
+  .center-table {
+      display: table;
+      margin: 0 auto;
+  }
+</style>
