@@ -77,7 +77,7 @@ WSGI_APPLICATION = "doanmonhoc.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'mssql',
-        'NAME': 'doanmonhoc',
+        'NAME': 'doanmonhoc2',
         'HOST': 'DESKTOP-RABVTMQ\\SQLEXPRESS',  # Địa chỉ máy chủ SQL Server
         'PORT': '',  # Cổng mặc định của SQL Server
         'OPTIONS': {

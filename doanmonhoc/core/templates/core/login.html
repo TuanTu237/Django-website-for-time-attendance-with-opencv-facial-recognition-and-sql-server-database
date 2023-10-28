@@ -6,18 +6,9 @@
   <div style="text-align: center; padding: 20px;">
    
     <div style="background-color: #3498db; padding: 20px; border-radius: 5px; display: inline-block;">
-      <h2 style="color: #fff;">Đăng nhập</h2>
-      <form action="/login" method="post"> <!-- Đổi "/login" thành URL xử lý đăng nhập thực tế -->
-        <div style="display: flex; flex-direction: column;">
-          <div style="margin: 10px 0;">
-            <label for="username" style="color: #fff;">Tên đăng ký:</label>
-            <input type="text" style="border-radius: 10px;" id="username" name="username" required>
-          </div>
-          <div style="margin: 10px 0;">
-            <label for="password" style="color: #fff;">Mật khẩu:</label>
-            <input type="password" style="border-radius: 10px;" id="password" name="password" required>
-          </div>
-          <a href="{% url 'slidebar' %}" class="px-6 py-3 text-lg font-semibold bg-blue-600 text-white rounded-xl hover:bg-blue-700">Đăng Nhập</a>
+      <h2 class="px-6 py-3 text-lg font-semibold  text-white ">Vui  lòng chọn loại tài khoản</h2>
+      <a href="{% url 'loginNV' %}" class="px-6 py-3 text-lg font-semibold bg-blue-600 text-white rounded-xl hover:bg-blue-700">Nhân Viên</a>
+      <a href="{% url 'loginQL' %}" class="px-6 py-3 text-lg font-semibold bg-blue-600 text-white rounded-xl hover:bg-blue-700">Quản Lý Nhân Viên</a>
     </div>
   </div>
 {% endblock %}

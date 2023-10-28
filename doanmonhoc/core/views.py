@@ -12,3 +12,12 @@ def signup(request):
 
 def slidebar(request):
     return render(request,'core/slidebar.html')
+
+def slideNV(request):
+    return render(request,'core/slideNV.html')
+
+def loginNV(request):
+    return render(request,'core/loginNV.html')
+
+def loginQL(request):
+    return render(request,'core/loginQL.html')

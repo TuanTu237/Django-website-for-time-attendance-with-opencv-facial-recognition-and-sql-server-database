@@ -12,8 +12,13 @@
         <a href="/" class="text-xl font-semibold text-blue-400">Phần mềm chấm công bằng nhận diện khuôn mặt</a>
         <div class="space-x-6">
             <!--<a href="#" class="text-lg font-semibold hover:text-gray-500 ">Dang nhap</a> -->
+            {% if request.login %}
+            <a href="{% url 'index' %}" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Đăng Xuất</a>
+           
+                {% else %}
             <a href="{% url 'login' %}" class="px-6 py-3 text-lg font-semibold bg-blue-600 text-white rounded-xl hover:bg-blue-700">Đăng Nhập</a>
             <a href="{% url 'signup'%}" class="px-6 py-3 text-lg font-semibold bg-blue-600 text-white rounded-xl hover:bg-blue-700">Đăng Ký</a>
+            {% endif %}
         </div>
     </nav>
     <div class="px-6 py-6">
